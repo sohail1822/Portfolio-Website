@@ -1,0 +1,1058 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel&family=El+Messiri&family=Kalam:wght@300&family=PT+Serif&family=Sansita+Swashed&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    /* font-family: 'Caveat', cursive;
+    font-family: 'Cinzel', serif;
+    font-family: 'El Messiri', sans-serif;
+    font-family: 'Kalam', cursive;
+    font-family: 'PT Serif', serif;
+    font-family: 'Sansita Swashed', cursive;
+    font-family: 'Syne Mono', monospace; */
+}
+:root{
+    --primary-color: #5337a1;
+    --secondary-color:  rgb(19, 18, 18);
+    --tertiary-color: grey;
+    --fourth-color: #efebfa;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--fourth-color);
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+    height:90%;
+}
+
+
+
+/* SCROLL TOP BUTTON CSS*/
+.scroll-top{
+    z-index: 100;
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+}
+.scroll-top svg{
+    pointer-events: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:780px) {
+    .scroll-top{
+        right: 200px;
+        width: 25px;
+        height: 20px;
+    }
+}
+/* SCROLL TOP BUTTON CSS ENDED*/
+
+
+
+
+
+
+/* NAVIGATION RELATED CSS */
+#navigation{
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    height: auto;
+    z-index: 100;
+}
+.nav-ham{
+    width: 80px;
+    height: 80px;
+    color: black;
+}
+#navigation .nav-icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav-content{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    max-width: 800px;
+    z-index: 100;
+    background-color: rgb(53, 53, 53);
+    /* color: whitesmoke; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform: translateX(100%);
+    transition: 0.4s ease-in transform;
+}
+#nav-content.show{
+    transform: translateX(0);
+    box-shadow: -6px 0px -29px 7px #000000a3;
+}
+#nav-content .section-heading{
+    text-align: left;
+}
+#nav-content{
+    width: 50%;
+    /* position: relative; */
+}
+#nav-content ul{
+    list-style: none;
+     margin-left: -180px;
+}
+#nav-content ul li{
+    margin-bottom: 1rem;
+    
+}
+#nav-content ul li a{
+    display: inline-block;
+    color: whitesmoke;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    text-align: left;
+}
+#nav-content  .wrapper  ul li a::after {
+    content: attr(data-text);
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    bottom: 40%;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #afadad25;
+    opacity: 0;
+    z-index: -1;
+    text-align: center;
+    transform: rotate(90deg) scale(3);
+    color: rgb(184, 93, 93);;
+    transition: 0.5s ease-in all;
+    transition-property: opacity , transform;
+    font-size: 1rem;
+}
+#nav-content ul li a:hover::after{
+    opacity: 1;
+    color: rgb(184, 93, 93);
+    transform: scale(3) translateY(1px) rotate(90deg);
+}
+#nav-content .close-btn{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: black;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease background-color;
+    
+}
+#nav-content  .close-btn:hover {
+    background-color: rgb(202, 91, 113);
+    cursor: pointer;
+}
+.nav-cross{
+    width: 50px;
+    height: 50px;
+}
+@media only screen and (max-width:780px){
+    #navigation{
+        right: 10px;
+        top: 0;
+    }
+    #nav-content{
+        height: 70%;
+    }
+    #nav-content nav ul li a::after{
+        display: none;
+    } 
+    #nav-content .section-heading{
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+    #nav-content .wrapper{
+        width: 60%;
+    }
+    #nav-content ul {
+    list-style: none;
+    margin-left: 0px;
+    }
+    #nav-content ul li a{
+        color: crimson;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+/* MAIN SECTION RELATED CSS */
+#main{
+    /* height: 100vh; */
+    width: 100%;
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+}
+#main .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    font-family: 'PT Serif', serif;
+    width: 50%;
+}
+.left .sub-heading{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: 0;
+    animation: fade 0.5s ease-in-out 3s forwards ;
+}
+.left .heading{
+    font-size: 2.8rem;
+    font-family: 'El Messiri', sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.left .heading .wrapper{
+    display: inline-block;
+    overflow: hidden; 
+}
+.wrapper span{
+    position: relative;
+    bottom: -60px;
+    animation: reveal 3s ease-in-out forwards;
+}
+
+/* ANIMATION */
+@keyframes reveal {
+    0%{
+        bottom: -70px;
+    }
+    50%{
+        color: rgb(44, 204, 151);
+    }
+    100%{
+        bottom: 0;
+        color: red;
+    }
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* ANIMATION ENDED*/
+
+.left .desc{
+    max-width: 400px;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fade 0.5s ease-in-out 3s forwards;
+}
+.left .btn{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    gap: 0rem;
+    opacity: 0;
+    animation: fade 0.5s ease-in-out 3s forwards ;
+}
+.play-btn{
+    width: 40%;
+    height: 40%;
+    color: rgb(36, 35, 35);
+}
+.play-btn ion-icon{
+    width: 60px;
+    height: 60px;
+}
+.play-btn:hover{
+    color: crimson;
+    /* background-color: black; */
+    transition: 0.8s ease-in-out all;
+}
+.primary-btn{
+    width: 30vh;
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: wheat;
+    font-family: 'Syne Mono', monospace;
+    padding: 15px 25px;
+    border-radius: 6px;
+    border: 3px solid whitesmoke;
+    text-align: center;
+}
+.primary-btn:hover{
+    background-color: whitesmoke;
+    color: black;
+    border: 3px solid black;
+    transition: 0.8s ease-in-out all;
+}
+.right{
+    text-align: right;
+    width:50%;
+}
+.right img{
+    width: 100%;
+    max-width: 450px;
+    height:auto;
+    object-fit: cover;
+}
+
+
+@media only screen and (max-width:780px){
+    #main{
+        margin-bottom: 0rem;
+    }
+    .container{
+       height: 100%;
+       flex-direction: column;
+       margin: 0 -30px;
+       margin-top: 140px;
+    }
+    .btn{
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        text-align: left;
+        margin: 0 auto;
+    }
+    .left .sub-heading{
+        font-size: 1.5rem;
+    }
+    .left .heading{
+        font-size: 2rem;
+    }
+    .left .desc{
+        font-size: 0.9rem;
+    }
+    .primary-btn{
+        padding: 5px 15px;
+        text-align: center;
+        display: inline-block;
+        width: 300%;
+        border-radius: 6px;
+    }
+    .btn svg{
+        width:40%;
+    }
+    #main .right{
+       margin-top: 0px;
+       margin-left: -100px;
+    }
+    .right img{
+        width: 160%;
+        height: 120%;
+    }
+    .wrapper span{
+        margin-top:0px ;
+    }
+}
+/* MAIN SECTION RELATED CSS ENDED */
+
+
+
+
+
+
+/* SERVICES SECTION RELATEDS CSS */
+#services{
+    padding: 0rem 0;
+}
+.all-items{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.items{
+    padding: 1rem;
+    margin: 10px 20px;
+    width: 500px;
+    height: 400px;
+    transition: 0.8s ease-in all;
+}
+.items:nth-child(1):hover{
+    background-color: #ab9dd1;
+}
+.items:nth-child(2):hover{
+    background-color:aquamarine;
+}
+.items:nth-child(3):hover{
+    background-color: rgb(204, 135, 162);
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 0.6rem;
+    border: 2px solid black;
+    padding: 10px;
+}
+.item-heading{
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'Sansita Swashed', cursive;
+    margin-bottom: 1.5rem;
+}
+.items .item-desc{
+    color: black;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    letter-spacing: 0.02cm;
+}
+.items:nth-child(1).icon{
+    background-color:#ab9dd1;
+}
+.items:nth-child(2).icon{
+    background-color:aquamarine;
+}
+.items:nth-child(3).icon{
+    background-color: rgb(204, 135, 162);
+}
+.section-heading{
+   font-size: 3rem;
+   text-transform: uppercase;
+   padding-top: 0px;
+   letter-spacing: 0.02cm;
+   text-align: center;
+   position: relative;
+   font-family: 'El Messiri', sans-serif;
+}
+.section-heading::before{
+    content: attr(data-outline);
+    position: absolute;
+    left: -0%;
+    top: -10%;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02cm;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #5a24ed2f;
+    z-index: -1;
+}
+@media only screen and (max-width:780px){
+    .all-items{
+        display: flex;
+        flex-direction: column;
+    }
+    .items{
+        width: auto;
+        height: auto;
+        margin-top: 20px ;
+        text-align: center;
+        transition: 1s ease-in all;
+    }
+    .icon{
+        display: inline-block;
+        margin: 0 auto;
+        margin-bottom: 0.6rem;
+    }
+    .items:nth-child(1){
+        background-color: #ab9dd1;
+    }
+    .items:nth-child(2){
+        background-color:aquamarine;
+    }
+    .items:nth-child(3){
+        background-color: rgb(204, 135, 162);
+    }
+}
+/* SERVICES SECTION ENDED */
+
+
+
+
+
+
+/* TESTIMONIAL SECTION CSS */
+#testimonal{
+    padding: 5rem 0;
+}
+.all-items{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+     
+}
+.item{
+    text-align: center;
+    position: relative;
+    padding: 10px 20px;
+}
+#testimonal .item:nth-child(1),
+#testimonal .item:nth-child(3){
+    flex: 3;
+    transform: scale(0.8);
+}
+#testimonal .item:nth-child(2){
+    flex: 4;
+    padding: 10px;
+}
+#testimonal .item::after{
+    content: '';
+    position: absolute;
+    /* height: 120%; */
+    width: 105%;
+    top: 5px;
+    left: 0px;
+    z-index: -1;
+    box-shadow: 0px 0px 15px 0px #490fe9;
+}
+#testimonal .item:nth-child(2)::after{
+    transform: skew(361deg,355deg);
+    height: 100%;
+    border-radius: 26px 67px 35px 67px;
+}
+#testimonal .item:nth-child(1)::after,
+#testimonal .item:nth-child(3)::after{
+    transform: skew(2deg , 9deg);
+    height: 110%;
+    border-radius: 52px 30px 59px 60px;
+
+}
+.testimonal-img img{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.img{
+    object-fit: cover;
+}
+.icon{
+    margin: 20px auto;
+}
+.testimonal-heading{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+}
+.testimonal-subheading{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--tertiary-color);
+}
+.testimonal-desc{
+    color:var(--secondary-color);
+    font-size: 22px;
+    font-family: 'Caveat', cursive;
+    /* font-family: 'Kalam', cursive; */
+}
+@media only screen and (max-width:780px){
+    #testimonal{
+    padding-top: 0px;
+    margin-top: 0px;
+    }
+    .all-items{
+    gap: 0px;
+    }
+    .item{
+    margin: 0px 0px;
+    }
+   .item:nth-child(2){
+    flex: 4;
+    transform: scale(0.8);
+    padding: 0px;
+    }
+    .testimonal-desc{
+        font-size: 20px;
+    }
+}
+/* TESTIMONIAL SECTION ENDED */
+
+
+
+
+
+
+/* STATS SECTION CSS */
+#stats{
+    padding: 5rem;
+}
+#stats .all-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.item-stats{
+    padding: 1rem;
+    margin: 0px;
+}
+.number{
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+}
+.stats-subheading{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: 5px;
+    font-family: 'Cinzel', serif;
+}
+.item-stats:nth-child(1){
+    background-color: rgba(222, 231, 36, 0.322);
+}
+.item-stats:nth-child(2){
+    background-color: rgba(0, 255, 115, 0.322);
+}
+.item-stats:nth-child(3){
+    background-color: rgba(199, 71, 71, 0.322);
+}
+@media only screen and (max-width:780px){
+  .item-stats{
+    margin-top: 20px;
+   }
+   #stats{
+    padding: 0rem 2.5rem;
+    padding-bottom: 0px;
+   }
+}
+/* STATS SECTION ENDED*/
+
+
+
+
+
+
+/* ABOUT SECTION CSS */
+#about{
+    padding: 5rem 0;
+}
+.about-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 30px;
+}
+.left{
+    padding: 2rem;
+    text-align: center;
+}
+.left h3{
+    color: coral;
+    font-family: 'Cinzel', serif;
+    margin-top: 10px;
+}
+.card-desc{
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+}
+.card{
+    box-shadow: 0px 0px 10px rgb(224, 107, 107);
+    padding: 3rem;
+}
+.about-card-img{
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.about-card-img img{
+    object-fit: cover;
+}
+.right .subheading{
+    color: var(--primary-color);
+    font-family: 'Cinzel', serif;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.slogan{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.right-text{
+    color: var(--tertiary-color);
+    margin-bottom: 2rem;
+    font-family: 'Caveat', cursive;
+    font-size: 27px;
+    text-align: center;
+}
+.buttons .outline{
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+}
+@media only screen and (max-width:780px){
+    #about{
+        padding: 0rem;
+        margin-top: 0;
+        padding-top: 0px;
+    }
+    .about-wrapper{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .left{
+        width: 100%;
+        font-size: 18px;
+    }
+    #about .right{
+        margin-top: 50px;
+        width: 100%;
+     }
+    .right .subheading{
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .slogan{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .primary-btn{
+        width: 50vw;
+        padding: 20px 20px;
+        margin: 10px 0;
+    }
+}
+
+
+/* PROJECTS SECTION RELATED CSS */
+#projects{
+    padding: 5rem 0;
+}
+#projects .all-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#projects .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 0rem;
+}
+#projects .item:nth-child(even){
+    flex-direction: row-reverse;
+}
+#projects .item .left{
+    flex: 1;
+}
+#projects .item .left .img{
+    width: 550px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px  #4705fc33 ;
+    position: relative;
+}
+#projects .item .left .img{
+    background-size: cover;
+    object-fit: cover;
+}
+#projects .item .right{
+    flex: 1;
+    width: 500px;
+    height: 430px;
+    margin-left: -150px;
+    background-color: rgb(196 187 220);
+    padding: 3rem 1rem;
+    box-shadow: 0 0 20px #00000028;
+    z-index: 2;
+}
+#projects .item .left .img::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(214, 181, 224);
+}
+#projects .buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+#projects .primary-btn{
+    margin: 10px 10px;
+    width: 20vh;
+}
+#projects .item .left  img{
+    object-fit: cover;
+    transition: 0.8s ease-in all;
+}
+#projects  .buttons .primary-btn svg{
+    width: 15px;
+    height: 15px;
+}
+#projects .item:nth-child(even) .right{
+    margin-left: 0px;
+}
+#projects .item:nth-child(even) .left{
+    margin-left: -150px;
+}
+#projects .item:hover .left .img{
+    transform: scale(1.1);
+    z-index: 1;
+}
+#projects .project-title {
+    font-size: 1.8rem;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 0.6rem;
+}
+#projects .project-sub-title{
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+    text-align: center;
+    font-family: 'El Messiri', sans-serif;
+}
+#projects .project-desc{
+    color: #ffeded;
+    margin-bottom: 1.5rem;
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width:780px){
+    #projects .item{
+        flex-direction: column;
+    }
+    #projects .item .left{
+        width: 100%;
+    }
+    #projects .item .right{
+        width: 60%;
+        margin-left: 0px;
+        /* margin-top: -150px; */
+    }
+    #projects .item .left .img{
+        margin-left: 40px;
+    }
+    #projects .item:nth-child(even){
+        flex-direction: column;
+    }
+    #projects .item:nth-child(even) .right{
+        /* margin-left: 60px; */
+        width: 95%;
+    }
+    #projects .item:nth-child .right{
+        width: 80%;
+        margin-left: 50px;
+    }
+    #projects  .right .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    #projects .project-desc {
+        font-size: 1.8rem;
+        color: whitesmoke;
+    }
+    #projects .item .left img {
+        width: 350px;
+        height: 300px;
+    }
+}
+/* PROJECTS SECTION RELATED CSS ENDED */
+
+
+/* FOOTER SECTION RELATED CSS */
+#footer{
+    background-color: #462d8b;
+    color: whitesmoke;
+    padding: 5rem 0 5rem 0;
+    cursor: pointer;
+}
+#footer footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#footer .col-1{
+    flex: 3;
+}
+#footer .col-2{
+    flex: 3;
+}
+#footer .col-3{
+    flex: 3;
+}
+#footer .logo img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+#footer .signature{
+    font-size: 1.5rem;
+    color: aquamarine;
+    font-weight: lighter;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.15cm;
+    transform: skew(18deg , -1deg);
+}
+#footer .column-heading{
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 0.2cm;
+}
+#footer ul a li:hover {
+    transition: 0.5s ease-in-out color;
+    color: black;
+}
+#footer .column-content{
+    font-family: 'PT Serif', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05cm;
+    color: rgb(214, 182, 182);
+    margin-top: 10px;
+}
+#footer .column-content:hover{
+    background-color: rgb(36, 35, 35);
+    color: whitesmoke;
+    transition: 0.5s ease-in all;
+    padding: 3px;
+    border-radius: 5px;
+}
+#footer ul a{
+    display: flex;
+}
+#footer ul li{
+    list-style: none;
+}
+#footer .col-2{
+    margin-left: 150px;
+}
+#footer .col-3{
+    margin-left: 150px;
+}
+#footer ul li{
+    text-decoration:  none;
+    font-size: 1.3rem;
+    color: coral;
+}
+@media only screen and (max-width:780px){
+    #footer{
+        padding: 0rem;
+        padding-bottom: 40px;
+        cursor: pointer;
+    }
+    #footer footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem;
+        height: 100%;
+    }
+    /* #footer .column-heading {
+        margin-left: 50px;
+    }
+    h4.column-content {
+        margin-left: 45px;
+    } */
+    .signature{
+        display: none;
+    }
+    .col-1,.col-2,.col-3{
+        width: 100%;
+        /* margin-bottom: 3rem; */
+    }
+    .col-1{
+        margin-top: 0px;
+        margin-left: 180px;
+    }
+    #footer .col-2{
+        margin-left: 80px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    #footer .col-3{
+        margin-left: 80px;
+    }
+    #footer ul li {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: coral;
+        text-align: center;
+        /* margin: 0 80px; */
+    }
+}
+#copy-right{
+    background-color: #462d8b;
+    height: auto;
+    cursor: pointer;
+}
+.copy-right{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.copy-right:hover{
+    background-color: rgb(36, 35, 35);
+    padding: 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    transition: 0.5s ease-in all;
+}
+  @media only screen and (max-width:780px){
+    .copy-right{
+        color: whitesmoke;
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+        height: 30vh;
+    }
+}

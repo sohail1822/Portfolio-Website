@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel&family=El+Messiri&family=Kalam:wght@300&family=PT+Serif&family=Sansita+Swashed&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#contact{
+    padding: 5rem 0;
+}
+#contact .contact-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4rem;
+}
+.contact-wrapper .left{
+    flex: 1;
+}
+.contact-wrapper .right{
+    flex: 1;
+}
+.contact-heading{
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+.contact-desc{
+    color: grey;
+    margin-bottom: 3.5rem;
+}
+.contact-info{
+    margin-bottom: 3rem;
+}
+.contact-info ul{
+    list-style: none;
+}
+.contact-info ul li{
+    overflow: hidden;
+    border-radius: 5px;
+}
+.contact-info ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    font-family: 'Caveat', cursive;
+    padding: 0.8rem;
+    gap: 1rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+.contact-info ul li:hover{
+    background-color: rgb(78, 206, 163);
+    color: white;
+}
+.contact-info ul li:hover a{
+    color: rgb(255, 255, 255);
+}
+.contact-icon{
+    width: 30px;
+    color: rgb(207, 38, 16);
+    /* font-family: 'Baloo Bhaijaan 2', cursive; */
+}
+.contact-icon:hover{
+    color: white;
+}
+.social-info ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    gap: 1rem;
+}
+.social-info ul li a {
+    color: red;
+}
+.social-info ul li a:hover {
+    color: black;
+}
+
+
+.right{
+    background-color: rgb(230, 144, 144);
+    width: 100%;
+    /* height: 50vh; */
+    height: auto;
+}
+.form-wrapper{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input,textarea{
+    border:3px solid black ;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+.icon-icon{
+    width: 30px;
+    height: 30px;
+}
+.submit-btn{
+    display: inline-block;
+    padding: 5px 10px;
+    /* margin: 0 auto; */
+    font-size: 1.3rem;
+    color: wheat;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    left: -15px;
+    width: 15vw;
+    cursor: pointer;
+    border-radius: 4px;
+}
+textarea{
+    margin: 10px 25px;
+}
+.submit-btn:hover{
+    background-color: whitesmoke;
+    color: black;
+    transition: 0.8s ease-in-out all;
+    cursor: pointer;
+}
+.form-heading{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(18, 18, 19);
+    margin-bottom: 0.8rem;
+    font-family: 'Cinzel', serif;
+}
+
+@media only screen and (max-width:780px){
+    .contact-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .social-info ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-text{
+        font-size: 1rem;
+    }
+    .submit-btn{
+        left: -80px;
+        width: 40vw;
+    }
+}
